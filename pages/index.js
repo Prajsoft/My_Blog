@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 import NavBar from '/components/NavBar';
-import Footers from '/components/Footers';git 
+import Footers from '/components/Footers';
 
 export default function Home() {
   return (
