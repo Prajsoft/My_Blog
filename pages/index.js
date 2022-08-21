@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 import NavBar from '/components/NavBar';
 import Footers from '/components/Footers';
+import Blog from '/components/Blog';
 
 export default function Home() {
   return (
@@ -66,6 +67,7 @@ export default function Home() {
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
+        < Blog />
       </footer>
       < Footers />
     </div>
