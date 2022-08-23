@@ -4,9 +4,21 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 import NavBar from '/components/NavBar';
 import Footers from '/components/Footers';
-import Blog from '/components/Blog';
+import { loadPosts } from '../lib/load-posts';
 
-export default function Home() {
+export async function getStaticProps() {
+  const allPostsData = JSON.stringify(await loadPosts());
+  // const allPostsDataParse = JSON.parse(allPostsData);
+  // console.log(typeof('data',allPostsData));
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Home({allPostsData}) {
+  const parsedData = JSON.parse(allPostsData);
   return (
     <div className={styles.container}>
       <Head>
@@ -67,8 +79,31 @@ export default function Home() {
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
-        < Blog />
       </footer>
+
+      <section>
+        <h2>Blog</h2>
+        <ul>
+          {parsedData.map((post)=> (
+            <li key={post.id}>
+              {post.attributes.Title}
+              <br />
+              {post.attributes.Tag}
+              <br />
+              {post.attributes.Description}
+              <br />
+              {post.attributes.Tag}
+              <br />
+              {post.attributes.MainContent}
+            </li> 
+            ))
+          }
+            {/* allPostsData.map(({ tag, description, title }) => (<li>...</li>)); */}
+          
+          Hello
+        </ul>
+      </section> 
+
       < Footers />
     </div>
   )
