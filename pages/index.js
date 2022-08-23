@@ -95,6 +95,8 @@ export default function Home({allPostsData}) {
               {post.attributes.Tag}
               <br />
               {post.attributes.MainContent}
+              <br />
+              {/* {post.attributes.MainPic.} */}
             </li> 
             ))
           }
