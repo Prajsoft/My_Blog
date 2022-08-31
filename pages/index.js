@@ -49,6 +49,10 @@ export default function Home({allPostsData}) {
             <div id={styles.AreaOne}>Area 10</div>
             <div id={styles.AreaOne}>Area 11</div>
             <div id={styles.AreaOne}>Area 12</div>
+            <div id={styles.AreaOne}>Area 13</div>
+            <div id={styles.AreaOne}>Area 14</div>
+            <div id={styles.AreaOne}>Area 15</div>
+            <div id={styles.AreaOne}>Area 16</div>
         </div>
         {/* <div className={styles.grid}> */}
           {/* <a href="https://nextjs.org/docs" className={styles.card}>
