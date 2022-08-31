@@ -36,27 +36,40 @@ export default function Home({allPostsData}) {
         <p className={styles.description}>
           <code> One Stop Information Digital Kiosk  </code>
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
+        <div className={styles.gridContainerCenter}>
+            <div id={styles.AreaOne}>Area 1</div>
+            <div id={styles.AreaTwo}>Area 2</div>
+            <div id={styles.AreaOne}>Area 3</div>
+            <div id={styles.AreaOne}>Area 4</div>
+            <div id={styles.AreaOne}>Area 5</div>
+            <div id={styles.AreaOne}>Area 6</div>
+            <div id={styles.AreaOne}>Area 7</div>
+            <div id={styles.AreaOne}>Area 8</div>
+            <div id={styles.AreaOne}>Area 9</div>
+            <div id={styles.AreaOne}>Area 10</div>
+            <div id={styles.AreaOne}>Area 11</div>
+            <div id={styles.AreaOne}>Area 12</div>
+        </div>
+        {/* <div className={styles.grid}> */}
+          {/* <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          </a> */}
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          {/* <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          </a> */}
 
-          <a
+          {/* <a
             href="https://github.com/vercel/next.js/tree/canary/examples"
             className={styles.card}
           >
             <h2>Examples &rarr;</h2>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          </a> */}
 
-          <a
+          {/* <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
@@ -65,10 +78,10 @@ export default function Home({allPostsData}) {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -79,8 +92,8 @@ export default function Home({allPostsData}) {
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
-      </footer>
-
+      </footer> */}
+ 
       <section>
         <h2>Blog</h2>
         <ul>
@@ -99,12 +112,12 @@ export default function Home({allPostsData}) {
               {/* {post.attributes.MainPic.} */}
             </li> 
             ))
-          }
-            {/* allPostsData.map(({ tag, description, title }) => (<li>...</li>)); */}
+}
+           
           
-          Hello
+           Hello
         </ul>
-      </section> 
+      </section>  
 
       < Footers />
     </div>
