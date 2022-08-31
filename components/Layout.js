@@ -5,9 +5,13 @@ export default function Layout() {
 
 return(
 <>
-<div className= 'styles.title'>
-<h1>Layout</h1>
+
+<h1>Layout Test</h1>
+<div className= {styles.gridLayoutContainer}>
+   <div>Hello</div>
+   <div>Hello2</div>
 </div>
+
 
 </>
 
