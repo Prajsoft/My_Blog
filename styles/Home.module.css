@@ -172,12 +172,12 @@
 }
 
 .gridContainerCenter div{
-background-color: rgb(127, 255, 138);
+background-color: transparent;
 margin: 0 5px 5px 0;
 display: flex;
 position: relative;
 border:solid;
-border-color: rgb(127, 255, 138);
+border-color: transparent;
 border-radius: 10px;
 display: block;
 aspect-ratio: 1;
