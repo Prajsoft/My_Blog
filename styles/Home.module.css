@@ -192,7 +192,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .gridLayoutContainer{
   position: relative;
   display: grid;
-  grid-template-columns:10fr 3fr ;
+  grid-template-columns:10fr 5fr ;
   grid-template-rows: repeat(1,minmax(0,1fr));
   gap: 2px 2px;
   justify-items: stretch;

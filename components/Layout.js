@@ -8,8 +8,12 @@ return(
 
 <h1>Layout Test</h1>
 <div className= {styles.gridLayoutContainer}>
-   <div>Hello</div>
-   <div>Hello2</div>
+   <div>
+        <h1>Latest Articles</h1>
+   </div>
+   <div>
+        <h1>Articles</h1>
+   </div>
 </div>
 
 
