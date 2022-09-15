@@ -15,7 +15,7 @@ export async function getStaticProps() {
       allPostsData,
     },
   };
-}
+};
 
 export default function Home({allPostsData}) {
   const parsedData = JSON.parse(allPostsData);
@@ -103,6 +103,8 @@ export default function Home({allPostsData}) {
         <ul>
           {parsedData.map((post)=> (
             <li key={post.id}>
+              {post.id}
+              <br />
               {post.attributes.Title}
               <br />
               {post.attributes.Tag}
