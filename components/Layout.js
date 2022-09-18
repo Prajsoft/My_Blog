@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css';
+// import Link from 'next/link';
 
 export default function Layout() {
     
@@ -10,7 +11,9 @@ return(
 <div className= {styles.gridLayoutContainer}>
    <div>
         <h1>Latest Articles</h1>
-   </div>
+        
+        
+     </div>
    <div>
         <h1>Articles</h1>
    </div>

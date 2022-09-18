@@ -1,7 +1,7 @@
 // import LayoutBlogPage from "../../components/LayoutBlogPage";
 import { useRouter } from "next/router";
 
-export default function Post() {
+export default function Post({post}) {
     const router = useRouter();
     // router.push({
     //     pathname: '/posts/[postId]'
@@ -12,31 +12,36 @@ export default function Post() {
 return (
     <>
 
-<h1> {postId} </h1>
+<h1> {post.id} {post.title}</h1>
 
-
+<p>post.body</p>
 
 </>
 )
 }
+export async function getStaticPaths(){
 
+  return{
 
-// export async function getStaticPaths(){
-//     const paths = await loadPosts();
-//     return{
-//         paths,
-//         fallback: false,
-//     };
-//  console.log(paths)
-// }
+    paths: [
+      {
+        params: { postId: '1'}
+      },
+    ],
+    fallback : false,
+  }
+}
 
-// export async function getStaticProps({ params }){
-//     const slugs = await loadPosts('slugs', `${params.id}`)
-//     return {
-//       props: {
-//         id
-//       }
-//     }
+export async function getStaticProps(context) {
+    const {params} = context;
+    const response = await fetch(
+                `http://localhost:1337/api/blogs?filters[id][$eq]= ${params.postId}`
+                )
 
-
-// }
+    const data = await response.json;
+    return {
+      props: {
+        post :data,
+      },
+    };
+  }; 
