@@ -23,11 +23,12 @@ export async function getStaticPaths(){
 
   return{
 
-    paths: [
-      {
-        params: { postId: '1'}
-      },
-    ],
+    // paths: [
+    //   {
+    //     params: { postId: '1'}
+    //   },
+    // ],
+    paths,
     fallback : false,
   }
 }
@@ -39,9 +40,17 @@ export async function getStaticProps(context) {
                 )
 
     const data = await response.json;
+
+    const paths = data.map( post => {
+      return {
+        params: {
+          postId = `$(post.id)`
+        }
+      }
+    })
     return {
       props: {
         post :data,
-      },
+      },  
     };
   }; 
