@@ -24,7 +24,10 @@ export default function Careers({post}) {
             <li key={post.id}>
               {/* {post.id} */}
               <br />
+              <Link href={`posts/${post.id}`} passHref>
               <b>{post.attributes.Title}</b>
+
+              </Link>
               {/* <br />
               {post.attributes.Tag}
               <br />
