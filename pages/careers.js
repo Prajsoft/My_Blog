@@ -11,7 +11,7 @@ export default function Careers({post}) {
     return (
       <>
       <div className={styles.container}>
-      < NavBar />
+     
         <div className={styles.main}>
             <h1>Careers</h1>
            <div className={styles.gridLayoutContainer}>
@@ -51,7 +51,7 @@ export default function Careers({post}) {
 
            </div>
         </div>
-      < Footers />
+     
       </div>
       </>
      

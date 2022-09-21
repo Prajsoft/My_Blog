@@ -7,13 +7,13 @@ export default function HowToGuides() {
     return (
       <>
       <div className={styles.container}>
-      < NavBar />
+     
         <div className={styles.main}>
             <h1>How to Guides</h1>
             <Layout />
             
         </div>
-      < Footers />
+      
       </div>
       </>
      

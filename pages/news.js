@@ -6,14 +6,14 @@ import styles from '../styles/Home.module.css';
 export default function News() {
     return (
       <>
-      <div className={styles.container}>
-      < NavBar />
-        <div className={styles.main}>
+      <div >
+      
+        <div >
             <h1>News</h1>
-            <Layout />
+            <Layout/>
             
         </div>
-      < Footers />
+      
       </div>
       </>
      

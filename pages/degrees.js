@@ -7,13 +7,13 @@ export default function Degrees() {
     return (
       <>
       <div className={styles.container}>
-      < NavBar />
+      
         <div className={styles.main}>
             <h1>Degrees</h1>
             <Layout />
             
         </div>
-      < Footers />
+      
       </div>
       </>
      

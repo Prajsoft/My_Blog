@@ -7,13 +7,13 @@ export default function Exams() {
     return (
       <>
       <div className={styles.container}>
-      < NavBar />
+      
         <div className={styles.main}>
             <h1>Exams</h1>
             <Layout />
             
         </div>
-      < Footers />
+      
       </div>
       </>
      

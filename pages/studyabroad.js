@@ -7,13 +7,13 @@ export default function StudyAbroad() {
     return (
       <>
       <div className={styles.container}>
-      < NavBar />
+      
         <div className={styles.main}>
             <h1>StudyAbroad</h1>
             <Layout />
             
         </div>
-      < Footers />
+      
       </div>
       </>
      

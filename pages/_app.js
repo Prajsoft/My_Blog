@@ -4,7 +4,16 @@ import Footers from '../components/Footers';
 
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+  <>
+  <div>
+    <NavBar/>
+  <Component {...pageProps} />
+  <Footers/>
+
+  </div>
+  </>
+  )
 }
 
 export default MyApp
