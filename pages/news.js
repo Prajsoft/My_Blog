@@ -6,9 +6,9 @@ import styles from '../styles/Home.module.css';
 export default function News() {
     return (
       <>
-      <div >
+      <div className={styles.container}>
       
-        <div >
+        <div className={styles.main}>
             <h1>News</h1>
             <Layout/>
             

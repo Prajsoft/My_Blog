@@ -74,7 +74,7 @@ export default function Home({data}) {
               <br />
               {post.attributes.MainContent}
               <br />
-              {/* {post.attributes.MainPic.} */}
+              {post.attributes.MainPic}
             </li> 
             ))
 }
