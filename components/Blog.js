@@ -1,12 +1,32 @@
 import { loadPosts } from "../lib/load-posts";
 
-export default function Blog({ posts }) {
+export default function Blog({ post }) {
   return (
-    <ul>
-      {posts.map((post) => (
-        <li>{post.title}</li>
-      ))}
-    </ul>
+    <>
+      <h2>Blog</h2>
+      <ul>
+        {post.map((post) => (
+          <li key={post.id}>
+            {/* {post.id} */}
+            <br />
+            {/* <Link href={`posts/${post.id}`} passHref> */}
+            {/* {`posts/${post.id}`} */}
+            <b>{post.attributes.Title}</b>
+
+            {/* </Link> */}
+            {/* <br />
+      {post.attributes.Tag}
+      <br />
+      {post.attributes.Description}
+      <br />
+      {post.attributes.Tag}
+      <br />
+      {post.attributes.MainContent} */}
+            <br />
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 
@@ -14,15 +34,3 @@ export default function Blog({ posts }) {
 // It won't be called on client-side, so you can even do
 // direct database queries.
 // This function runs only on the server side
-export async function getStaticProps() {
-  // Instead of fetching your `/api` route you can call the same
-  // function directly in `getStaticProps`
-  const data = await loadPosts();
-
-  // Props returned will be passed to the page component
-  return {
-    props: {
-      posts: data,
-    },
-  };
-}

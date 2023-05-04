@@ -10,29 +10,7 @@ export default function Layout({ post }) {
         <div>
           <h1>Latest Articles</h1>
           <section>
-            <h2>Blog</h2>
-            <ul>
-              {post.map((post) => (
-                <li key={post.id}>
-                  {/* {post.id} */}
-                  <br />
-                  {/* <Link href={`posts/${post.id}`} passHref> */}
-                  {/* {`posts/${post.id}`} */}
-                  <b>{post.attributes.Title}</b>
-
-                  {/* </Link> */}
-                  {/* <br />
-              {post.attributes.Tag}
-              <br />
-              {post.attributes.Description}
-              <br />
-              {post.attributes.Tag}
-              <br />
-              {post.attributes.MainContent} */}
-                  <br />
-                </li>
-              ))}
-            </ul>
+            <Blog post={post} />
           </section>
         </div>
         <div>
