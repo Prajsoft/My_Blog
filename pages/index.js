@@ -5,6 +5,7 @@ import Link from "next/link";
 import NavBar from "/components/NavBar";
 import Footers from "/components/Footers";
 import { loadPosts } from "../lib/load-posts";
+import Card from "/components/Card";
 
 export async function getStaticProps() {
   const allBlogData = await loadPosts();
@@ -35,7 +36,7 @@ export default function Home({ data }) {
         </p>
         <div className={styles.gridContainerCenter}>
           <div id={styles.AreaOne}>Area 1</div>
-          <div id={styles.AreaTwo}>Area 2</div>
+          <div id={styles.AreaOne}>Area 2</div>
           <div id={styles.AreaOne}>Area 3</div>
           <div id={styles.AreaOne}>Area 4</div>
           <div id={styles.AreaOne}>Area 5</div>
@@ -75,6 +76,7 @@ export default function Home({ data }) {
           ))}
         </ul>
       </section>
+      <Card />
     </div>
   );
 }
