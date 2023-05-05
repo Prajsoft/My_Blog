@@ -22,7 +22,8 @@ export default function Home({ data }) {
   const cardData = {
     imageSrc: "https://placeimg.com/640/480/tech",
     title: "Card Title",
-    description: "This is a sample card.",
+    description:
+      "For these courses, you will use real developer tools and software including VS Code, PostgreSQL, and the Linux / Unix command line to complete interactive tutorials and build projects.",
   };
   // const parsedData = data;
   return (
@@ -40,26 +41,18 @@ export default function Home({ data }) {
           <code> One Stop Information Digital Kiosk </code>
         </p>
         <div className={styles.gridContainerCenter}>
-          <div id={styles.AreaOne}>Area 1</div>
-          <div id={styles.AreaOne}>Area 2</div>
-          <div id={styles.AreaOne}>Area 3</div>
-          <div id={styles.AreaOne}>Area 4</div>
-          <div id={styles.AreaOne}>Area 5</div>
-          <div id={styles.AreaOne}>Area 6</div>
-          <div id={styles.AreaOne}>Area 7</div>
-          <div id={styles.AreaOne}>Area 8</div>
-          <div id={styles.AreaOne}>Area 9</div>
-          <div id={styles.AreaOne}>Area 10</div>
-          <div id={styles.AreaOne}>Area 11</div>
-          <div id={styles.AreaOne}>Area 12</div>
-          <div id={styles.AreaOne}>Area 13</div>
-          <div id={styles.AreaOne}>Area 14</div>
-          <div id={styles.AreaOne}>Area 15</div>
-          <div id={styles.AreaOne}>Area 16</div>
+          {data.map((post) => (
+            <Card
+              key={post.id}
+              imageSrc={post.attributes.MainPic}
+              title={post.attributes.Title}
+              description={post.attributes.Description}
+            />
+          ))}
         </div>
       </main>
 
-      <section>
+      {/* <section>
         <h2>Blog</h2>
         <ul>
           {data.map((post) => (
@@ -80,12 +73,12 @@ export default function Home({ data }) {
             </li>
           ))}
         </ul>
-      </section>
-      <Card
+      </section> */}
+      {/* <Card
         imageSrc={cardData.imageSrc}
         title={cardData.title}
         description={cardData.description}
-      />
+      /> */}
     </div>
   );
 }
