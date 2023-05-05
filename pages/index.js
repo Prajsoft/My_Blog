@@ -1,16 +1,12 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import NavBar from "/components/NavBar";
-import Footers from "/components/Footers";
 import { loadPosts } from "../lib/load-posts";
 import Card from "/components/Card";
 
 export async function getStaticProps() {
   const allBlogData = await loadPosts();
-  // const allPostsDataParse = JSON.parse(allPostsData);
-  // console.log(allBlogData);
+
   return {
     props: {
       data: allBlogData,
@@ -19,13 +15,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ data }) {
-  const cardData = {
-    imageSrc: "https://placeimg.com/640/480/tech",
-    title: "Card Title",
-    description:
-      "For these courses, you will use real developer tools and software including VS Code, PostgreSQL, and the Linux / Unix command line to complete interactive tutorials and build projects.",
-  };
-  // const parsedData = data;
   return (
     <div className={styles.container}>
       <Head>
@@ -51,34 +40,6 @@ export default function Home({ data }) {
           ))}
         </div>
       </main>
-
-      {/* <section>
-        <h2>Blog</h2>
-        <ul>
-          {data.map((post) => (
-            <li key={post.id}>
-              {post.id}
-              <br />
-              {post.attributes.Title}
-              <br />
-              {post.attributes.Tag}
-              <br />
-              {post.attributes.Description}
-              <br />
-              {post.attributes.Tag}
-              <br />
-              {post.attributes.MainContent}
-              <br />
-              {post.attributes.MainPic}
-            </li>
-          ))}
-        </ul>
-      </section> */}
-      {/* <Card
-        imageSrc={cardData.imageSrc}
-        title={cardData.title}
-        description={cardData.description}
-      /> */}
     </div>
   );
 }
