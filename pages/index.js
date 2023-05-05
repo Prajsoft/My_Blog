@@ -19,6 +19,11 @@ export async function getStaticProps() {
 }
 
 export default function Home({ data }) {
+  const cardData = {
+    imageSrc: "https://placeimg.com/640/480/tech",
+    title: "Card Title",
+    description: "This is a sample card.",
+  };
   // const parsedData = data;
   return (
     <div className={styles.container}>
@@ -76,7 +81,11 @@ export default function Home({ data }) {
           ))}
         </ul>
       </section>
-      <Card />
+      <Card
+        imageSrc={cardData.imageSrc}
+        title={cardData.title}
+        description={cardData.description}
+      />
     </div>
   );
 }
