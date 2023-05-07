@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
     "moment": "^2.29.4",
     "next": "^12.2.2",

@@ -36,6 +36,7 @@ export default function Home({ data }) {
               imageSrc={post.attributes.MainPic}
               title={post.attributes.Title}
               description={post.attributes.Description}
+              postId={post.id}
             />
           ))}
         </div>

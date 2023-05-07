@@ -1,6 +1,9 @@
 import { loadPosts } from "../../lib/load-posts";
+import { getPostbyId } from "../../lib/load-posts";
 
 export default function Post({ post }) {
+  console.log("Post function");
+  console.log(post);
   return (
     <>
       <div>
@@ -13,7 +16,11 @@ export default function Post({ post }) {
 
 export async function getStaticPaths() {
   const posts = await loadPosts();
-  const paths = posts.map((post) => ({ params: { id: post.id.toString() } }));
+  const paths = posts.map((post) => ({
+    params: { postId: post.id.toString() },
+  }));
+  console.log("paths");
+  console.log(paths);
   return {
     paths,
     fallback: false,
@@ -21,7 +28,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = await loadPosts(params.id);
+  const post = await getPostbyId(params.postId);
+  console.log("getstaticprops");
+  console.log(post);
   return {
     props: {
       post,

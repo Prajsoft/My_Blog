@@ -1,22 +1,10 @@
 /** @type {import('next').NextConfig} */
+require("dotenv").config();
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "placeimg.com",
-        port: "",
-        pathname: "/640/480/**",
-      },
-      {
-        protocol: "http",
-        hostname: "localhost",
-        port: "3000",
-        pathname: "/**",
-      },
-    ],
+  env: {
+    API_URL: process.env.API_URL,
   },
 };
 
