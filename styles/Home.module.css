@@ -4,9 +4,44 @@
   background-color: whitesmoke;
 }
 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  background-color: #ffafcc;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  color: black;
+  background-color: #cdb4db;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .main {
-  min-height: 100vh;
-  padding: 0 0;
+  min-height: calc(100vh - 150px);
+  min-width: calc(100vw - 50px);
+  padding: 0 0 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -21,13 +56,6 @@
 
 .title {
   color: #f300d7;
-  text-decoration: none;
-}
-
-.title :hover,
-.title :focus,
-.title :active {
-  text-decoration: underline;
 }
 
 .title {
@@ -39,7 +67,6 @@
 .title,
 .description {
   text-align: center;
-  /* color:#c886c7; */
 }
 
 .description {
@@ -49,26 +76,52 @@
   color: yellowgreen;
 }
 
+.cardContainer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  background-color: transparent;
+  padding: 10px;
+  gap: 10px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
-  border: 2px solid #0f0e0e;
+  border: transparent;
   border-radius: 8px;
-  padding: 16px;
+  border-color: darkgray;
+  padding: 20px;
   width: 400px;
-  background-color: rgb(146, 140, 113);
+  background-color: gray;
   overflow: hidden;
-  height: 600px;
-  width: 370px;
+  box-shadow: 0 8px 16px rgba(10, 51, 184, 0.1);
 }
 
-.card div:hover {
-  border-color: #cc3497;
+.cardImage {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid;
+  background-color: thistle;
+  margin-bottom: 16px;
+  overflow: hidden;
 }
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #f6f6f6;
+}
+
 .ctitle {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
-  color: #f300d7;
+  line-height: 1.2;
+  color: navy;
   text-align: center;
 }
 
@@ -84,72 +137,23 @@
   border-radius: 10px;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  background-color: #ffafcc;
-  color: black;
+/* Media queries for different screen sizes */
+/* @media only screen and (min-width: 768px) {
+  .card {
+    max-width: 600px;
+    height: 800px;
+  }
 }
 
-.footer1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  color: black;
-  background-color: #cdb4db;
+@media only screen and (min-width: 992px) {
+  .card {
+    max-width: 800px;
+    height: 1000px;
+  }
 }
 
-.gridContainerCenter {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  /* grid-template-rows: repeat(4, minmax(0, 1fr)); */
-  grid-gap: 1rem;
-  justify-items: stretch;
-  align-items: stretch;
-  justify-content: stretch;
-  height: calc(50vw-5px);
-  /* width: 80vw; */
-}
-
-.gridContainerCenter div {
-  background-color: transparent;
-  margin: 0 5px 5px 0;
-  display: flex;
-  position: relative;
-  border: solid;
-  border-color: transparent;
-  border-radius: 10px;
-  display: block;
-  aspect-ratio: 1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.gridContainerCenter div:hover {
-  border-color: #34ccc2;
-}
-
-.gridLayoutContainer {
-  position: relative;
-  display: grid;
-  grid-template-columns: 10fr 5fr;
-  grid-template-rows: repeat(1, minmax(0, 1fr));
-  gap: 2px 2px;
-  justify-items: stretch;
-  align-items: stretch;
-  justify-content: stretch;
-  /* border: solid; */
-  height: calc(50vw-5px);
-  width: 90vw;
-  aspect-ratio: 1;
-  /* padding-bottom: 100%; */
-}
-
-.gridLayoutContainer div {
-  border: solid;
-}
+@media only screen and (min-width: 1200px) {
+  .card {
+    max-width: 1000px;
+    height: 1200px;
+  } */

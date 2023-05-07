@@ -6,13 +6,15 @@ export default function Card({ imageSrc, title, description }) {
     <>
       <div className={styles.card}>
         <div>
-          <Image
-            src={imageSrc}
-            alt={title}
-            className={styles.cimage}
-            width={640}
-            height={480}
-          />
+          <div>
+            <Image
+              src={imageSrc}
+              alt={title}
+              className={styles.cardImage}
+              width={640}
+              height={480}
+            />
+          </div>
           <h2 className={styles.ctitle}> {title} </h2>
           <p className={styles.cdescription}> {description}</p>
         </div>

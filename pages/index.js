@@ -29,7 +29,7 @@ export default function Home({ data }) {
         <p className={styles.description}>
           <code> One Stop Information Digital Kiosk </code>
         </p>
-        <div className={styles.gridContainerCenter}>
+        <div className={styles.cardContainer}>
           {data.map((post) => (
             <Card
               key={post.id}
