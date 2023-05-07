@@ -1,61 +1,30 @@
-// import LayoutBlogPage from "../../components/LayoutBlogPage";
-import { useRouter } from "next/router";
+import { loadPosts } from "../../lib/load-posts";
 
-export default function Post({post}) {
-    // const router = useRouter();
-    // // router.push({
-    // //     pathname: '/posts/[postId]'
-    // //   })
-    // console.log(router.query);
-    // const postId =router.query.postId;
-
-return (
+export default function Post({ post }) {
+  return (
     <>
-
-<h1> {post.id} {post.title}</h1>
-
-<p>post.body</p>
-
-</>
-)
+      <div>
+        <h1>{post.title}</h1>
+        <p>{post.content}</p>
+      </div>
+    </>
+  );
 }
-export async function getStaticPaths(){
 
-  return{
-
-    // paths: [
-    //   {
-    //     params: { postId: '1'}
-    //   },
-    // ],
+export async function getStaticPaths() {
+  const posts = await loadPosts();
+  const paths = posts.map((post) => ({ params: { id: post.id.toString() } }));
+  return {
     paths,
-    fallback : false,
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps(context) {
-    const {params} = context;
-    console.log("Hello");
-    console.log(params);
-    const response = await fetch(
-                `http://localhost:1337/api/blogs?filters[id][$eq]= ${params.postId}`
-                ) .then (
-                   (response)=>{return response.json}
-                )
-console.log(response.json)
-    const data = await response.json;
-    console.log(data);
-
-    const paths = data.map( post => {
-      return {
-        params: {
-          post= `$(post.id)`
-        }
-      }
-    })
-    return {
-      props: {
-        post :data,
-      },  
-    };
-  }; 
+export async function getStaticProps({ params }) {
+  const post = await loadPosts(params.id);
+  return {
+    props: {
+      post,
+    },
+  };
+}
