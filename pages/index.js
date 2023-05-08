@@ -21,7 +21,9 @@ export default function Home({ data }) {
           {data.map((post) => (
             <Card
               key={post.id}
-              imageSrc={post.attributes.MainPic}
+              imageSrc={
+                post.attributes.MainPic.data[0].attributes.formats.thumbnail.url
+              }
               title={post.attributes.Title}
               description={post.attributes.Description}
               Slug={post.attributes.Slug}

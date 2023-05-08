@@ -5,14 +5,15 @@ import {
 } from "../../lib/load-posts";
 
 export default function BlogPost({ post }) {
-  console.log("Post function");
-  console.log(post);
+  console.log("Post function", post);
+  console.log(process.env.GREETING);
+  const attributes = post.data[0].attributes;
   return (
     <>
       <div>
-        <h1>{post.data.id}</h1>
-        {/* <h1>{post.data.attributes.Title}</h1>
-        <p>{post.data.attributes.Description}</p> */}
+        <h1>{post.id}</h1>
+        <h1>{attributes.Title}</h1>
+        <p>{attributes.Description}</p>
       </div>
     </>
   );
@@ -31,21 +32,14 @@ export async function getStaticPaths() {
   };
 }
 
-// export async function getStaticProps(params) {
-//   const post = await getPostById(params.Slug);
-//   console.log("post", post);
-//   return prepareForSerializatoin({
-//     props: {
-//       post,
-//     },
-//   });
-// }
-export async function getStaticProps(params) {
-  const post = await getPostById(params.Slug);
+export async function getStaticProps(context) {
+  console.log("context", context);
+  console.log("context.params.Slug", context.params?.Slug);
+  const post = await getPostById(context.params?.Slug);
   console.log("post", post);
   return {
     props: {
-      ...post,
+      post: post ? JSON.parse(JSON.stringify(post)) : null,
     },
   };
 }
