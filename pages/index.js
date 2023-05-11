@@ -14,8 +14,8 @@ export default function Home({ data }) {
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to Study Ghouls</h1>
 
-        <p className={styles.description}>
-          <code> One Stop Information Digital Kiosk </code>
+        <p className={styles.tagline}>
+          <code> Discover.Learn.Excel </code>
         </p>
         <div className={styles.cardContainer}>
           {data.map((post) => (

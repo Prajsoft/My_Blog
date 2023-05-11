@@ -2,7 +2,6 @@ import NavBar from "/components/NavBar";
 import Footers from "../components/Footers";
 import Layout from "../components/Layout";
 import styles from "../styles/Home.module.css";
-import Blog from "../components/Blog";
 import { loadPosts } from "../lib/load-posts";
 
 // export default function Degrees() {

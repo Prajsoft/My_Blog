@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Card.module.css";
 import Link from "next/link";
 
 export default function Card({ imageSrc, title, description, Slug }) {
@@ -21,7 +21,7 @@ export default function Card({ imageSrc, title, description, Slug }) {
           <p className={styles.cdescription}> {description}</p>
         </div>
         <Link href={`/posts/${Slug}`}>
-          <a className={styles.readMore}>Read More</a>
+          <a className={styles.creadMore}>Read More</a>
         </Link>
       </div>
     </>

@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #f300d7;
+  text-color: #ffffff;
+  padding: 10px;
+}
+.navbar a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .menu a {
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+  background-color: #ff69b4;
+  color: white;
+}

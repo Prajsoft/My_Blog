@@ -1,0 +1,56 @@
+.card {
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid darkgray;
+  padding: 20px;
+  width: 400px;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(10, 51, 184, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.cardImage {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.ctitle {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: navy;
+  text-align: center;
+}
+
+.cdescription {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  color: darkgreen;
+  text-align: justify;
+}
+
+.creadMore {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f300d7;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.creadMore:hover {
+  background-color: #d600c4;
+}
