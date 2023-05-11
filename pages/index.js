@@ -22,7 +22,7 @@ export default function Home({ data }) {
             <Card
               key={post.id}
               imageSrc={
-                post.attributes.MainPic.data[0].attributes.formats.thumbnail.url
+                post.attributes.HeroPic.data.attributes.formats.thumbnail.url
               }
               title={post.attributes.Title}
               description={post.attributes.Description}

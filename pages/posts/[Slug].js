@@ -8,12 +8,14 @@ export default function BlogPost({ post }) {
   console.log("Post function", post);
   console.log(process.env.GREETING);
   const attributes = post.data[0].attributes;
+  console.log("attributes", attributes.Content);
   return (
     <>
       <div>
         <h1>{post.id}</h1>
         <h1>{attributes.Title}</h1>
         <p>{attributes.Description}</p>
+        <p>{attributes.Content}</p>
       </div>
     </>
   );
