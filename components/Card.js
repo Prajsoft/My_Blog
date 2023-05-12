@@ -4,13 +4,14 @@ import Link from "next/link";
 
 export default function Card({ imageSrc, title, description, Slug }) {
   console.log("image", imageSrc);
+  const image = `http://localhost:1337${imageSrc}`;
   return (
     <>
       <div className={styles.card}>
         <div>
           <div>
             <Image
-              src={imageSrc}
+              src={image}
               alt={title}
               className={styles.cardImage}
               width={640}
