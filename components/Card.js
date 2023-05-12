@@ -3,7 +3,7 @@ import styles from "../styles/Card.module.css";
 import Link from "next/link";
 
 export default function Card({ imageSrc, title, description, Slug }) {
-  console.log("Card function", Slug);
+  console.log("image", imageSrc);
   return (
     <>
       <div className={styles.card}>
