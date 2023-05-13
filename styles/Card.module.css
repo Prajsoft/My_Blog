@@ -2,7 +2,7 @@
   flex: 0 0 400px;
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
+  border-radius: 20px;
   border: 1px solid darkgray;
   padding: 20px;
   width: 400px;
@@ -20,7 +20,7 @@
   height: 200px;
   width: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 30px;
   margin-bottom: 16px;
 }
 

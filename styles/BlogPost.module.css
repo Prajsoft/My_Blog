@@ -1,0 +1,22 @@
+.bcontainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.bdescription {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.bcontent {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
