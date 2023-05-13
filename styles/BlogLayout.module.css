@@ -4,19 +4,19 @@
   padding: 20px;
 }
 
-.btitle {
+.bTitle {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.bdescription {
+.bDescription {
   font-size: 1.2rem;
   color: #666;
   margin-bottom: 1rem;
 }
 
-.bcontent {
+.bContent {
   font-size: 1.4rem;
   line-height: 1.6;
 }

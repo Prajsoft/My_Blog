@@ -1,21 +1,9 @@
 import { loadPosts, getPostById } from "../../lib/load-posts";
-// import styles from "../styles/BlogPost.module.css";
-// import styles from "./BlogPost.module.css";
+import BlogLayout from "../../components/BlogLayout";
 
 export default function BlogPost({ post }) {
-  const attributes = post.data[0].attributes;
-  return (
-    // <div className={styles.bcontainer}>
-    //   <h1 className={styles.btitle}>{attributes.Title}</h1>
-    //   <p className={styles.bdescription}>{attributes.Description}</p>
-    //   <p className={styles.bcontent}>{attributes.Content}</p>
-    //   <div>
-    <div>
-      <h1>{attributes.Title}</h1>
-      <p>{attributes.Description}</p>
-      <p>{attributes.Content}</p>
-    </div>
-  );
+  // const attributes = post.data[0].attributes;
+  return <BlogLayout post={post} />;
 }
 
 export async function getStaticPaths() {

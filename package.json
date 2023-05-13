@@ -15,8 +15,9 @@
     "qs": "^6.11.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-markdown": "^8.0.3",
-    "react-moment": "^1.1.2"
+    "react-markdown": "^8.0.7",
+    "react-moment": "^1.1.2",
+    "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "8.22.0",
