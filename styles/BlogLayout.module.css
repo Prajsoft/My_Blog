@@ -1,22 +1,62 @@
-.bcontainer {
-  max-width: 800px;
+.container {
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
-.bTitle {
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Maintain the image aspect ratio (16:9) */
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: #333;
 }
 
-.bDescription {
+.description {
   font-size: 1.2rem;
   color: #666;
   margin-bottom: 1rem;
 }
 
-.bContent {
+.content {
   font-size: 1.4rem;
   line-height: 1.6;
+}
+
+.parallaxContainer {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.parallaxContainer .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }

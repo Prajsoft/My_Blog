@@ -3,7 +3,6 @@ import styles from "../styles/Card.module.css";
 import Link from "next/link";
 
 export default function Card({ imageSrc, title, description, Slug }) {
-  console.log("image", imageSrc);
   const image = `http://localhost:1337${imageSrc}`;
   return (
     <>
