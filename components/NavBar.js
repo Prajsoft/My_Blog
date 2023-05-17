@@ -4,7 +4,7 @@ import styles from "../styles/NavBar.module.css";
 export default function NavBar() {
   return (
     <>
-      <div className={styles.navbar}>
+      <nav className={styles.navbar}>
         <h3 className={styles.logo}>
           <Link href="/">Home</Link>
         </h3>
@@ -31,7 +31,7 @@ export default function NavBar() {
             <a>News</a>
           </Link>
         </div>
-      </div>
+      </nav>
     </>
   );
 }

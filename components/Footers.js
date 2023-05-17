@@ -4,7 +4,7 @@ import styles from "../styles/Footer.module.css";
 export default function Footers() {
   return (
     <>
-      <div className={styles.footer}>
+      <nav className={styles.footer}>
         <h5>
           <Link href="/aboutus">
             <a>About Us</a>
@@ -25,7 +25,7 @@ export default function Footers() {
             <a>Sitemap</a>
           </Link>
         </h5>
-      </div>
+      </nav>
     </>
   );
 }
