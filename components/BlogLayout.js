@@ -1,6 +1,7 @@
 import styles from "../styles/BlogLayout.module.css";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import htmlReactParser from "html-react-parser";
 
 export default function BlogLayout({ post }) {
   const attributes = post.data[0].attributes;
@@ -36,7 +37,10 @@ export default function BlogLayout({ post }) {
       <div className={styles.contentContainer}>
         <h1 className={styles.title}>{attributes.Title}</h1>
         <p className={styles.description}>{attributes.Description}</p>
-        <div className={styles.content}>{attributes.Content}</div>
+        {/* <div className={styles.content}>{attributes.Content}</div> */}
+        <div className={styles.content}>
+          {htmlReactParser(attributes.Content)}
+        </div>
       </div>
     </div>
   );
