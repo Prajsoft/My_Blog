@@ -1,8 +1,22 @@
 import { loadPosts, getPostById } from "../../lib/load-posts";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import BlogLayout from "../../components/BlogLayout";
 import Head from "next/head";
 
-export default function BlogPost({ post }) {
+export default function BlogPost({ post, err }) {
+  const router = useRouter();
+  useEffect(() => {
+    if (err) {
+      // Redirect to 404 page
+      router.push("/404");
+    }
+  }, [err, router]);
+
+  if (err) {
+    return <p>Loading...</p>; // Return null or a loading spinner while redirecting
+  }
+
   const attributes = post.data[0].attributes;
   console.log("slug post", post);
   return (
@@ -51,10 +65,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const post = await getPostById(context.params?.Slug);
-  return {
-    props: {
-      post: post ? JSON.parse(JSON.stringify(post)) : null,
-    },
-  };
+  try {
+    const post = await getPostById(context.params?.Slug);
+
+    return {
+      props: {
+        post: post ? JSON.parse(JSON.stringify(post)) : null,
+        err: false,
+      },
+    };
+  } catch (err) {
+    console.error("Error getting post by Slug", err);
+    return {
+      props: { err: true },
+    };
+  }
 }

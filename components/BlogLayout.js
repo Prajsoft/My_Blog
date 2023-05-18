@@ -7,8 +7,9 @@ export default function BlogLayout({ post }) {
   const ApiUrl = process.env.API_URL;
   const attributes = post.data[0].attributes;
   const image = attributes.HeroPic.data.attributes.url;
-  const imageSrc = `${ApiUrl}${image}`;
-  console.log(imageSrc);
+  const imageUrl = new URL(image, ApiUrl).toString();
+  // const imageSrc = `${ApiUrl}${image}`;
+
   const parallaxRef = useRef(null);
   useEffect(() => {
     const handleScroll = () => {
@@ -27,8 +28,8 @@ export default function BlogLayout({ post }) {
       <div className={styles.imageContainer}>
         <div ref={parallaxRef} className={styles.parallaxContainer}>
           <Image
-            src={imageSrc}
-            alt={attributes.title}
+            src={imageUrl}
+            alt={attributes.Title}
             className={styles.image}
             layout="responsive"
             width={1200}
