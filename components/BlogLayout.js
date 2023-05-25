@@ -34,6 +34,7 @@ export default function BlogLayout({ post }) {
             layout="responsive"
             width={1200}
             height={800}
+            priority={true}
           />
         </div>
       </div>
